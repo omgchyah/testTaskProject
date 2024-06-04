@@ -11,6 +11,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $status = "Active";
     $current_date = date('Y-m-d H:i:s');
 
+    // Load existing tasks from tasks.json
+    $tasksFile = 'tasks.json';
+    if (file_exists($tasksFile)) {
+        $tasksData = json_decode(file_get_contents($tasksFile), true);
+    } else {
+        $tasksData = [];
+    }
+
+    // Check for unique task name
+    foreach ($tasksData as $task) {
+        if (strcasecmp($task['name'], $name) == 0) {
+            echo "A task with the name '$name' already exists. Please choose a different name.";
+            exit;
+        }
+    }
+
     // Create a new Task instance
     $task = new Task($name, $description, $status, $current_date, $current_date, $user_name);
 
@@ -21,16 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'status' => $task->getStatus(),
         'date_creation' => $task->getDateCreation(),
         'date_updated' => $task->getDateUpdated(),
-        'user_name' => $task->getUserId()  // assuming user_name is stored in user_id property
+        'user_name' => $task->getUserId()
     ];
-
-    // Load existing tasks from tasks.json
-    $tasksFile = 'tasks.json';
-    if (file_exists($tasksFile)) {
-        $tasksData = json_decode(file_get_contents($tasksFile), true);
-    } else {
-        $tasksData = [];
-    }
 
     // Add the new task to the tasks array
     $tasksData[] = $taskArray;
@@ -42,3 +50,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header('Location: list_tasks.php');
     exit;
 }
+?>
