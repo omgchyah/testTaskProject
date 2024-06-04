@@ -19,10 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $tasksData = [];
     }
 
-    // Check for unique task name
+    // Check for unique task name by user
     foreach ($tasksData as $task) {
-        if (strcasecmp($task['name'], $name) == 0) {
-            echo "A task with the name '$name' already exists. Please choose a different name.";
+        if (strcasecmp($task['name'], $name) == 0 && strcasecmp($task['user_name'], $user_name) == 0) {
+            echo "<p>A task with the name '$name' already exists for user '$user_name'. Please choose a different name.</p>";
+            echo '<button onclick="history.back()">Back</button>';
             exit;
         }
     }
