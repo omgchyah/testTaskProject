@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Sacar al perro",
+        "description": "Ir al parque para perros",
+        "status": "active",
+        "date_creation": "2024-06-05",
+        "date_updated": "2024-06-05",
+        "user_name": "Carolina"
+    },
+    {
+        "name": "Sacar al perro",
+        "description": "Ir al parque para perros",
+        "status": "Active",
+        "date_creation": "2024-06-04 13:36:33",
+        "date_updated": "2024-06-04 13:36:33",
+        "user_name": null
+    },
+    {
+        "name": "Sacar al perro",
+        "description": "Ir al parque para perros",
+        "status": "Active",
+        "date_creation": "2024-06-04 13:36:41",
+        "date_updated": "2024-06-04 13:36:41",
+        "user_name": "Rossana"
+    },
+    {
+        "name": "Sacar al perro",
+        "description": "Ir al parque para perros",
+        "status": "Active",
+        "date_creation": "2024-06-04 13:39:07",
+        "date_updated": "2024-06-04 13:39:07",
+        "user_name": "Rossana"
+    },
+    {
+        "name": "Sacar al perro",
+        "description": "Ir al parque y jugar a la pelota",
+        "status": "Active",
+        "date_creation": "2024-06-04 13:41:56",
+        "date_updated": "2024-06-04 13:41:56",
+        "user_name": "Pedro"
+    },
+    {
+        "name": "Sacar al perro",
+        "description": "Ir al parque y jugar a la pelota",
+        "status": "Active",
+        "date_creation": "2024-06-04 13:42:58",
+        "date_updated": "2024-06-04 13:42:58",
+        "user_name": "Pedro"
+    },
+    {
+        "name": "Cocinar",
+        "description": "Hacer la compra",
+        "status": "completed",
+        "date_creation": "2024-06-04 13:51:05",
+        "date_updated": "2024-06-04 13:51:28",
+        "user_name": "Mar\u00eda"
+    },
+    {
+        "name": "Hacer una tarta",
+        "description": "Comprar los ingredientes",
+        "status": "Active",
+        "date_creation": "2024-06-04 13:56:25",
+        "date_updated": "2024-06-04 13:56:25",
+        "user_name": "Rossana"
+    }
+]
